@@ -1,0 +1,6 @@
+@use "../abstracts/mixins" as m;
+.navbar {
+  .navbar__wrapper {
+    @include m.flex(space-between, center);
+  }
+}

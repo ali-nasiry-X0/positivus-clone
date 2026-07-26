@@ -1,20 +1,31 @@
-@use 'variables' as v;
+@use '../abstracts/variables' as v;
 body {
     font-family: v.$font-family-primary;
     line-height: v.$line-height-base;
+    font-weight: v.$weight-regular;
 }
 h1 {
+    font-size: v.$font-size-h1-desktop;
     line-height: v.$line-height-h1;
+
 }
 h2 {
+    font-size: v.$font-size-h2-desktop;
+    font-weight: v.$weight-medium;
     line-height: v.$line-height-h2;
 }
 h3 {
+    font-size: v.$font-size-h3-desktop;
     line-height: v.$line-height-h3;
 }
 h4 {
+    font-size: v.$font-size-h4-desktop;
     line-height: v.$line-height-h3;
 }
 p {
+    font-size: v.$font-size-p-desktop;
     line-height: v.$line-height-base;
+}
+a{
+    text-decoration: none;
 }
