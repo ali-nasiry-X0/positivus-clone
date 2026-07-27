@@ -1,32 +1,32 @@
-@use 'abstracts/variables';
-@use 'abstracts/fonts';
-@use 'abstracts/mixins';
-@use 'abstracts/functions';
+@use "abstracts/variables";
+@use "abstracts/fonts";
+@use "abstracts/mixins";
+@use "abstracts/functions";
 
-@use 'base/reset';
-@use 'base/base';
-@use 'base/typography';
+@use "base/reset";
+@use "base/base";
+@use "base/typography";
 
-@use 'components/accordion';
-@use 'components/button';
-@use 'components/card';
-@use 'components/form';
-@use 'components/team-card';
-@use 'components/testimonials-text';
+@use "components/accordion";
+@use "components/button";
+@use "components/card";
+@use "components/form";
+@use "components/team-card";
+@use "components/testimonials-text";
 
-@use 'layout/container';
-@use 'layout/navbar';
-@use 'layout/hero';
-@use 'layout/services';
-@use 'layout/cta';
-@use 'layout/case-studies';
-@use 'layout/process';
-@use 'layout/team';
-@use 'layout/testimonials';
-@use 'layout/contact';
-@use 'layout/footer';
+@use "layout/container";
+@use "layout/navbar";
+@use "layout/hero";
+@use "layout/services";
+@use "layout/cta";
+@use "layout/case-studies";
+@use "layout/process";
+@use "layout/team";
+@use "layout/testimonials";
+@use "layout/contact";
+@use "layout/footer";
 
-@use 'pages/home';
+@use "pages/home";
 
-@use 'themes/light';
-@use 'themes/night';
+@use "themes/light";
+@use "themes/night";

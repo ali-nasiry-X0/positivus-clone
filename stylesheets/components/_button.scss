@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as v;
+.btn {
+  height: 4.25rem;
+  padding: 0 2.5rem;
+  border-radius: 0.9em;
+}
+.btn--primary {
+  color: v.$color-primary;
+}
+.btn--secondary {
+  color: v.$color-secondary;
+}
+.btn--tertiary {
+  background-color: v.$neutral-color-0;
+}
+
+.btn--full {
+}
