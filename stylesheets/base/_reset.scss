@@ -18,7 +18,9 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-
+a {
+  color: inherit;
+}
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -31,7 +33,6 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
 }
 
 input,

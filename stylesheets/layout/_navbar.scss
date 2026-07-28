@@ -3,29 +3,79 @@
 
 .navbar {
   padding-top: 1rem;
-  .navbar__wrapper {
+  &__content {
     @include m.flex(space-between, center);
     .navbar__logo {
       @include m.flex(space-between, center, row);
       font-size: v.$font-size-h2-desktop;
       font-weight: v.$weight-bold;
-      a {
+      .navbar__link {
         padding: 1rem;
       }
     }
     .navbar__menu {
       @include m.flex(space-between, center, row);
-      a {
-        padding: 0.9rem 2rem;
+      .navbar__link {
+        padding: 0.9rem 1.5rem;
         font-size: v.$font-size-p-desktop;
         font-weight: v.$weight-light;
       }
     }
     .navbar__toggle {
       display: none;
+      width: 2.5rem;
+      height: 2rem;
       background: none;
       border: none;
       cursor: pointer;
+      span {
+        border-radius: 1rem;
+        width: 100%;
+        height: 4px;
+        background-color: v.$neutral-color-900;
+        transition: all 0.6s ease;
+      }
+    }
+  }
+}
+@include m.respond("phone") {
+  .navbar {
+    margin-top: 2rem;
+    @include m.flex();
+
+    .container {
+      position: fixed;
+      @include m.glassesMenu;
+    }
+
+    .navbar__content {
+      .navbar__logo {
+        img {
+          margin-right: 0.8rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .brand {
+          font-size: v.$font-size-h2-mobile;
+        }
+      }
+
+      .navbar__toggle {
+        @include m.flex(center, space-between, column, 8px);
+        &.active span:nth-child(1) {
+          transform: translateY(12.5px) rotate(405deg);
+        }
+        &.active span:nth-child(2) {
+          opacity: 0;
+        }
+        &.active span:nth-child(3) {
+          transform: translateY(-12.5px) rotate(-405deg);
+        }
+      }
+
+      .navbar__menu {
+        display: none;
+      }
     }
   }
 }

@@ -1,6 +1,28 @@
-@mixin flex ($justify-content, $align-items , $flex-direction: row) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
+@mixin flex(
+  $justify-content: center,
+  $align-items: center,
+  $flex-direction: row,
+  $gap: none
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin glassesMenu {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.4px);
+  -webkit-backdrop-filter: blur(11.4px);
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == "phone" {
+    @media only screen and (max-width: 56.25rem) {
+      @content;
+    }
+  }
 }

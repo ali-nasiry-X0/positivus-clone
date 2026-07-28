@@ -3,6 +3,8 @@
   height: 4.25rem;
   padding: 0 2.5rem;
   border-radius: 0.9em;
+  font-size: v.$font-size-button;
+  font-weight: v.$weight-light;
 }
 .btn--primary {
   color: v.$color-primary;
@@ -14,5 +16,5 @@
   background-color: v.$neutral-color-0;
 }
 
-.btn--full {
-}
+// .btn--full {
+// }

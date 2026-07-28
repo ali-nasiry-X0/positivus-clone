@@ -26,6 +26,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  color: inherit;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -38,7 +42,6 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
 }
 
 input,
@@ -108,18 +111,16 @@ p {
 
 a {
   text-decoration: none;
+  text-align: center;
   color: #000000;
-}
-
-.btn {
-  font-size: 1.25rem;
-  font-weight: 300;
 }
 
 .btn {
   height: 4.25rem;
   padding: 0 2.5rem;
   border-radius: 0.9em;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .btn--primary {
@@ -135,48 +136,106 @@ a {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 100rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .navbar {
   padding-top: 1rem;
 }
-.navbar .navbar__wrapper {
+.navbar__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: none;
 }
-.navbar .navbar__wrapper .navbar__logo {
+.navbar__content .navbar__logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: none;
   font-size: 2.5rem;
   font-weight: 700;
 }
-.navbar .navbar__wrapper .navbar__logo a {
+.navbar__content .navbar__logo .navbar__link {
   padding: 1rem;
 }
-.navbar .navbar__wrapper .navbar__menu {
+.navbar__content .navbar__menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: none;
 }
-.navbar .navbar__wrapper .navbar__menu a {
-  padding: 0.9rem 2rem;
+.navbar__content .navbar__menu .navbar__link {
+  padding: 0.9rem 1.5rem;
   font-size: 1.125rem;
   font-weight: 300;
 }
-.navbar .navbar__wrapper .navbar__toggle {
+.navbar__content .navbar__toggle {
   display: none;
+  width: 2.5rem;
+  height: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+}
+.navbar__content .navbar__toggle span {
+  border-radius: 1rem;
+  width: 100%;
+  height: 4px;
+  background-color: #000000;
+  transition: all 0.6s ease;
+}
+
+@media only screen and (max-width: 56.25rem) {
+  .navbar {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+  }
+  .navbar .container {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.4px);
+    -webkit-backdrop-filter: blur(11.4px);
+  }
+  .navbar .navbar__content .navbar__logo img {
+    margin-right: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .navbar .navbar__content .navbar__logo .brand {
+    font-size: 2.25rem;
+  }
+  .navbar .navbar__content .navbar__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    gap: 8px;
+  }
+  .navbar .navbar__content .navbar__toggle.active span:nth-child(1) {
+    transform: translateY(12.5px) rotate(405deg);
+  }
+  .navbar .navbar__content .navbar__toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .navbar__content .navbar__toggle.active span:nth-child(3) {
+    transform: translateY(-12.5px) rotate(-405deg);
+  }
+  .navbar .navbar__content .navbar__menu {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
