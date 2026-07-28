@@ -14,7 +14,7 @@
       }
     }
     .navbar__menu {
-      @include m.flex(space-between, center, row);
+      @include m.flex(space-between, center);
       .navbar__link {
         padding: 0.9rem 1.5rem;
         font-size: v.$font-size-p-desktop;
@@ -38,13 +38,35 @@
     }
   }
 }
-@include m.respond("phone") {
+
+//popup
+
+.menu-popup {
+  display: none;
+  position: fixed;
+  // height: 10vh;
+  z-index: 9;
+  inset: 0;
+  &__content {
+    @include m.flex(center, space-between, column);
+    position: absolute;
+    padding: 1rem;
+    top: 5rem;
+    a {
+      padding: 1.5rem;
+    }
+  }
+}
+// responsiv
+
+@include m.respond("tablet") {
   .navbar {
     margin-top: 2rem;
     @include m.flex();
 
     .container {
       position: fixed;
+      z-index: 100;
       @include m.glassesMenu;
     }
 
@@ -77,5 +99,10 @@
         display: none;
       }
     }
+  }
+  // popup
+  .menu-popup {
+    @include m.flex();
+    background-color: yellowgreen;
   }
 }

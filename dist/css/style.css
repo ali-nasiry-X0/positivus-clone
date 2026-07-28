@@ -75,6 +75,8 @@ html {
 }
 body {
   background-color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -115,6 +117,29 @@ a {
   color: #000000;
 }
 
+@media only screen and (max-width: 56.25rem) {
+  h1 {
+    font-size: 2.7rem;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 1.625rem;
+    line-height: 1.4;
+  }
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
 .btn {
   height: 4.25rem;
   padding: 0 2.5rem;
@@ -192,6 +217,26 @@ a {
   transition: all 0.6s ease;
 }
 
+.menu-popup {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  inset: 0;
+}
+.menu-popup__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  gap: none;
+  position: absolute;
+  padding: 1rem;
+  top: 5rem;
+}
+.menu-popup__content a {
+  padding: 1.5rem;
+}
+
 @media only screen and (max-width: 56.25rem) {
   .navbar {
     margin-top: 2rem;
@@ -203,6 +248,7 @@ a {
   }
   .navbar .container {
     position: fixed;
+    z-index: 100;
     background: rgba(255, 255, 255, 0.09);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -235,6 +281,14 @@ a {
   }
   .navbar .navbar__content .navbar__menu {
     display: none;
+  }
+  .menu-popup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+    background-color: yellowgreen;
   }
 }
 
