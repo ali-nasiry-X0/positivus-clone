@@ -2,7 +2,7 @@
   $justify-content: center,
   $align-items: center,
   $flex-direction: row,
-  $gap: none
+  $gap: 0
 ) {
   display: flex;
   flex-direction: $flex-direction;
@@ -13,10 +13,16 @@
 
 @mixin glassesMenu {
   background: rgba(255, 255, 255, 0.09);
-  border-radius: 16px;
+  border-radius: 1rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(11.4px);
   -webkit-backdrop-filter: blur(11.4px);
+}
+@mixin glassesPopup {
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(10.6px);
 }
 
 @mixin respond($breakpoint) {
