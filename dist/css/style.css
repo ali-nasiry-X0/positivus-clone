@@ -259,9 +259,11 @@ a {
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.548);
   border-radius: 1rem;
+  transition: color 0.1s ease, background-color 0.2s ease;
 }
 .menu-popup__content .navbar__link:active {
-  color: blue;
+  background-color: rgba(255, 255, 255, 0.699);
+  color: rgb(0, 0, 0);
 }
 .menu-popup__content .btn--cta {
   width: 90vw;
