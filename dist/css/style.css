@@ -33,6 +33,7 @@ h6 {
 
 a {
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -161,7 +162,7 @@ a {
   color: #191a23;
 }
 
-.btn__cta {
+.btn--cta {
   background-color: #ffffff;
 }
 
@@ -248,14 +249,22 @@ a {
   gap: 0;
   position: absolute;
   padding: 1rem;
-  top: 5rem;
+  top: 6rem;
+  bottom: 3rem;
 }
-.menu-popup__content a {
+.menu-popup__content .navbar__link {
+  font-weight: 500;
+  color: #ffffff;
   width: 80vw;
   padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.548);
+  border-radius: 1rem;
 }
-.menu-popup__content .btn__cta {
-  width: 80vw;
+.menu-popup__content .navbar__link:active {
+  color: blue;
+}
+.menu-popup__content .btn--cta {
+  width: 90vw;
 }
 
 @media only screen and (max-width: 56.25rem) {
@@ -269,11 +278,9 @@ a {
   .navbar .container {
     position: fixed;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.952);
+    border: 0.5px solid rgba(0, 0, 0, 0.753);
     border-radius: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.4px);
-    -webkit-backdrop-filter: blur(11.4px);
   }
   .navbar .navbar__content .navbar__logo img {
     margin-right: 0.8rem;
@@ -307,15 +314,12 @@ a {
     pointer-events: auto;
     visibility: visible;
     transform: translateY(0);
+    background-color: color-mix(in srgb, #b9ff66 90%, transparent);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0;
-    background: rgba(255, 255, 255, 0.09);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.4rem);
-    -webkit-backdrop-filter: blur(10.6px);
   }
 }
 

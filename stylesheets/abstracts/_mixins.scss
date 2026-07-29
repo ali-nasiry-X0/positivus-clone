@@ -12,17 +12,9 @@
 }
 
 @mixin glassesMenu {
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.952);
+  border: 0.5px solid rgba(0, 0, 0, 0.753);
   border-radius: 1rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(11.4px);
-  -webkit-backdrop-filter: blur(11.4px);
-}
-@mixin glassesPopup {
-  background: rgba(255, 255, 255, 0.09);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0.4rem);
-  -webkit-backdrop-filter: blur(10.6px);
 }
 
 @mixin respond($breakpoint) {
