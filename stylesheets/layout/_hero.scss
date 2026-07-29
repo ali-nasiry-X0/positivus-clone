@@ -1,0 +1,34 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+.hero {
+  .container {
+    @include m.flex(space-between, stretch, row);
+  }
+  &__content,
+  &__image {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  &__content {
+    @include m.flex(space-between, start, column);
+    // padding: 0 5rem;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  &__explain {
+    font-size: v.$font-size-regular;
+  }
+}
+
+//responsive
+
+@include m.respond("tablet") {
+  .hero {
+    br {
+      display: none;
+    }
+  }
+}

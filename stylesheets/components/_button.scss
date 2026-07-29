@@ -7,13 +7,16 @@
   font-weight: v.$weight-light;
 }
 .btn--primary {
-  color: v.$color-primary;
+  background-color: v.$color-primary;
+  color: v.$neutral-color-0;
 }
 .btn--secondary {
-  color: v.$color-secondary;
+  background-color: v.$color-secondary;
+  color: v.$neutral-color-0;
 }
 .btn--cta {
   background-color: v.$neutral-color-0;
+  color: v.$neutral-color-900;
 }
 
 // .btn--full {
