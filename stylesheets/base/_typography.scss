@@ -28,7 +28,6 @@ p {
 }
 a {
   text-decoration: none;
-  text-align: center;
   color: v.$neutral-color-900;
 }
 @include m.respond("land-tab") {
