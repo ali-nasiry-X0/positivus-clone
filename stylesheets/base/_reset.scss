@@ -22,16 +22,6 @@ a {
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
-// a::selection {
-//   background-color: transparent;
-//   color: inherit; /* یا هر رنگی که دوست داری */
-// }
-
-// /* برای پشتیبانی بهتر در مرورگرهای قدیمی‌تر Firefox */
-// a::-moz-selection {
-//   background-color: transparent;
-//   color: inherit;
-// }
 body {
   min-height: 100vh;
   line-height: 1.5;

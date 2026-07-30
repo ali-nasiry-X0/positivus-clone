@@ -87,6 +87,7 @@
 
 @include m.respond("port-tab") {
   .navbar {
+    margin-bottom: v.$spacing-md;
     @include m.flex();
 
     .container {

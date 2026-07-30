@@ -25,10 +25,25 @@
 
 //responsive
 
-@include m.respond("tablet") {
+@include m.respond("land-tab") {
   .hero {
     br {
       display: none;
+    }
+  }
+}
+@include m.respond("port-tab") {
+  .hero {
+    .container {
+      @include m.flex(center, stretch, column-reverse);
+    }
+    &__content,
+    &__image {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+    &__content {
+      @include m.flex(center, center, column, 1.5rem);
     }
   }
 }

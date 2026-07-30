@@ -31,7 +31,7 @@ a {
   text-align: center;
   color: v.$neutral-color-900;
 }
-@include m.respond("tablet") {
+@include m.respond("land-tab") {
   h1 {
     font-size: v.$font-size-h1-mobile;
     line-height: v.$line-height-h1;
