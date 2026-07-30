@@ -8,4 +8,11 @@
       margin-bottom: v.$spacing-md;
     }
   }
+  .company-logos {
+    margin-bottom: v.$spacing-lg;
+
+    @include m.respond("land-tab") {
+      margin-bottom: v.$spacing-md;
+    }
+  }
 }

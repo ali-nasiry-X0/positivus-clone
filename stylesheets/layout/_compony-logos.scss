@@ -1,0 +1,14 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+.company-logos {
+  .container {
+    @include m.flex(space-between, center, row);
+    flex-wrap: wrap;
+  }
+  @include m.respond("land-tab") {
+    .container {
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+}

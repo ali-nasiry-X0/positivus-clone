@@ -379,11 +379,34 @@ a {
     gap: 1.5rem;
   }
 }
+.company-logos .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 75rem) {
+  .company-logos .container {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
 .home .hero {
   margin-bottom: 4rem;
 }
 @media only screen and (max-width: 75rem) {
   .home .hero {
+    margin-bottom: 2rem;
+  }
+}
+.home .company-logos {
+  margin-bottom: 4rem;
+}
+@media only screen and (max-width: 75rem) {
+  .home .company-logos {
     margin-bottom: 2rem;
   }
 }
