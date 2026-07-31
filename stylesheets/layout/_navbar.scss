@@ -2,7 +2,6 @@
 @use "../abstracts/variables" as v;
 
 .navbar {
-  margin-bottom: v.$spacing-lg;
   height: 6rem;
   padding-top: 1rem;
   &__content {
@@ -89,7 +88,6 @@
 
 @include m.respond("port-tab") {
   .navbar {
-    margin-bottom: v.$spacing-md;
     @include m.flex();
 
     .container {

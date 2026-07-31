@@ -1,14 +1,7 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 .home {
-  .hero {
-    margin-bottom: v.$spacing-lg;
-
-    @include m.respond("land-tab") {
-      margin-bottom: v.$spacing-md;
-    }
-  }
-  .company-logos {
+  .navbar {
     margin-bottom: v.$spacing-lg;
 
     @include m.respond("land-tab") {

@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 .hero {
+  margin-bottom: v.$spacing-lg;
   .container {
     @include m.flex(space-between, stretch, row);
   }
@@ -24,6 +25,8 @@
 //responsive
 @include m.respond("land-tab") {
   .hero {
+    margin-bottom: v.$spacing-md;
+
     br {
       display: none;
     }

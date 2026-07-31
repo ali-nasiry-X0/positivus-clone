@@ -1,6 +1,7 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
 .company-logos {
+  margin-bottom: v.$spacing-xxl;
   .container {
     @include m.flex(space-between, center, row);
     flex-wrap: wrap;

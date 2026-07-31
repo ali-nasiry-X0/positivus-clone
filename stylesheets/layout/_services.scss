@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+.services {
+  &__title {
+    @include m.flex(start, center, row, 1rem);
+    margin-bottom: v.$spacing-lg;
+  }
+  .title {
+    background-color: v.$color-primary;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+  }
+  &__card {
+    @include m.flex(space-between, center, row, 2rem);
+    flex-wrap: wrap;
+  }
+  .card {
+    height: 21rem;
+    -webkit-box-shadow: 0px 7px 0px 0px #000000;
+    box-shadow: 0px 7px 0px 0px #000000;
+    border: 1px solid black;
+    border-radius: 2.8rem;
+    margin-bottom: v.$spacing-md;
+    @include m.flex(space-around, center, row);
+    flex: 0 1 calc(50% - 2rem);
+    &__content {
+      @include m.flex(space-around, start, column);
+      height: 100%;
+    }
+    &__link {
+      @include m.flex(start, center);
+
+      img {
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+@include m.respond("land-tab") {
+  .services {
+    .card {
+      flex: 0 0 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as v;
+
+.card__title {
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  display: inline-block;
+}
+.card--primary {
+  .card__title {
+    background-color: v.$color-tertiary;
+  }
+  background-color: v.$color-primary;
+}
+.card--secondary {
+  background-color: v.$color-secondary;
+  .card__title {
+    background-color: v.$neutral-color-0;
+  }
+  .card__link {
+    color: v.$neutral-color-0;
+  }
+  //   color: v.$neutral-color-0;
+}
+.card--tertiary {
+  .card__title {
+    background-color: v.$color-primary;
+  }
+  background-color: v.$color-tertiary;
+}
