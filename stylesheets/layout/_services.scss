@@ -7,7 +7,7 @@
   }
   .title {
     background-color: v.$color-primary;
-    padding: 0.8rem;
+    padding: 0.6rem;
     border-radius: 0.8rem;
   }
   &__card {
@@ -36,10 +36,80 @@
     }
   }
 }
+
 @include m.respond("land-tab") {
   .services {
+    &__title {
+      @include m.flex(center, center, column, 1rem);
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
     .card {
       flex: 0 0 100%;
+      padding: 3rem;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1rem;
+
+      &__content {
+        display: contents;
+      }
+
+      &__content > div {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-self: start;
+        align-self: start;
+      }
+
+      &__image {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        justify-self: end;
+        align-self: end;
+
+        img {
+          transform: translateY(-20%);
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__link {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-self: start;
+        align-self: end;
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@include m.respond("phone") {
+  .services {
+    .card {
+      padding: 1rem;
+      &__image {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        justify-self: end;
+        align-self: end;
+
+        img {
+          transform: translate(30%, -10%);
+          width: 70%;
+          height: auto;
+        }
+      }
+      &__title {
+        padding: 0.4rem;
+      }
     }
   }
 }
