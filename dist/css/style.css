@@ -431,6 +431,9 @@ a {
   }
 }
 
+.services {
+  margin-bottom: 5rem;
+}
 .services__title {
   display: flex;
   flex-direction: row;
@@ -486,6 +489,9 @@ a {
 }
 
 @media only screen and (max-width: 75rem) {
+  .services {
+    margin-bottom: 2rem;
+  }
   .services__title {
     display: flex;
     flex-direction: column;
@@ -552,6 +558,64 @@ a {
   }
   .services .card__title {
     padding: 0.4rem;
+  }
+}
+.cta {
+  margin-bottom: 5rem;
+}
+.cta .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  background-color: #f3f3f3;
+  border-radius: 2.8rem;
+  padding: 5rem;
+}
+.cta__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4rem;
+  flex: 0 0 50%;
+}
+.cta__explain {
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 75rem) {
+  .cta .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 3rem;
+  }
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex: 0 0 100%;
+  }
+  .cta__explain {
+    text-align: justify;
+  }
+  .cta__image {
+    display: none;
+  }
+  .cta .btn {
+    height: auto;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .cta .btn {
+    font-size: 1rem;
   }
 }
 .home .navbar {

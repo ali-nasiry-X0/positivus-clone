@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+.cta {
+  margin-bottom: v.$spacing-xl;
+  .container {
+    @include m.flex(space-between, center, row);
+    background-color: v.$color-tertiary;
+    border-radius: v.$border-radius-card;
+    padding: 5rem;
+  }
+  &__content {
+    @include m.flex(space-between, start, column, 4rem);
+    flex: 0 0 50%;
+  }
+  //   &__image {
+  //   }
+  &__explain {
+    font-size: v.$font-size-regular;
+  }
+}
+@include m.respond("land-tab") {
+  .cta {
+    .container {
+      @include m.flex(center, center, column, 0);
+      padding: 3rem;
+    }
+    &__content {
+      @include m.flex(center, center, column, 3rem);
+      flex: 0 0 100%;
+    }
+    &__explain {
+      text-align: justify;
+    }
+    &__image {
+      display: none;
+    }
+    .btn {
+      height: auto;
+      padding: 1rem;
+    }
+  }
+}
+@include m.respond("phone") {
+  .cta {
+    .btn {
+      font-size: v.$font-size-p-mobile;
+    }
+  }
+}

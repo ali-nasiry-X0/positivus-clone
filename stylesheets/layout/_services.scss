@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 .services {
+  margin-bottom: v.$spacing-xl;
   &__title {
     @include m.flex(start, center, row, 1rem);
     margin-bottom: v.$spacing-lg;
@@ -19,7 +20,7 @@
     -webkit-box-shadow: 0px 7px 0px 0px #000000;
     box-shadow: 0px 7px 0px 0px #000000;
     border: 1px solid black;
-    border-radius: 2.8rem;
+    border-radius: v.$border-radius-card;
     margin-bottom: v.$spacing-md;
     @include m.flex(space-around, center, row);
     flex: 0 1 calc(50% - 2rem);
@@ -39,6 +40,7 @@
 
 @include m.respond("land-tab") {
   .services {
+    margin-bottom: v.$spacing-md;
     &__title {
       @include m.flex(center, center, column, 1rem);
       text-align: center;
