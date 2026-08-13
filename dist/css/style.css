@@ -618,6 +618,60 @@ a {
     font-size: 1rem;
   }
 }
+.caseStudy .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0;
+}
+.caseStudy__title {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0;
+}
+.caseStudy__title h2 {
+  background-color: #b9ff66;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+  margin-right: 2rem;
+}
+.caseStudy__title p {
+  width: 35rem;
+}
+.caseStudy__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0;
+  color: #f3f3f3;
+  background-color: #191a23;
+  padding: 4rem 2rem;
+  border-radius: 2.8rem;
+}
+.caseStudy__card {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+}
+.caseStudy__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 10rem;
+  color: #b9ff66;
+  margin-top: auto;
+}
+
 .home .navbar {
   margin-bottom: 4rem;
 }

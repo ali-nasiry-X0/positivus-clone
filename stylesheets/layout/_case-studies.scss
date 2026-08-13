@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.caseStudy {
+  .container {
+    @include m.flex(space-between, stretch, column);
+  }
+  &__title {
+    margin-bottom: v.$spacing-lg;
+    @include m.flex(start, center);
+    h2 {
+      background-color: v.$color-primary;
+      padding: 0.6rem;
+      border-radius: 0.8rem;
+      margin-right: 2rem;
+    }
+    p {
+      width: 35rem;
+    }
+  }
+  &__content {
+    @include m.flex(space-between, stretch, row);
+    color: v.$color-tertiary;
+    background-color: v.$color-secondary;
+    padding: 4rem 2rem;
+    border-radius: v.$border-radius-card;
+  }
+  &__card {
+    padding: 0 5rem;
+    @include m.flex(start, start, column);
+  }
+  &__link {
+    @include m.flex(space-between, center);
+    width: 10rem;
+    color: v.$color-primary;
+    margin-top: auto;
+  }
+}
