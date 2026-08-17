@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as m;
 
 .caseStudy {
+  margin-bottom: v.$spacing-xl;
   .container {
     @include m.flex(space-between, stretch, column);
   }
@@ -19,6 +20,7 @@
     }
   }
   &__content {
+    overflow-x: hidden;
     @include m.flex(space-between, stretch, row);
     color: v.$color-tertiary;
     background-color: v.$color-secondary;
@@ -34,5 +36,28 @@
     width: 10rem;
     color: v.$color-primary;
     margin-top: auto;
+  }
+}
+@include m.respond("land-tab") {
+  .caseStudy {
+    margin-bottom: v.$spacing-md;
+    hr {
+      display: none;
+    }
+    &__content {
+      overflow-x: auto;
+      @include m.flex(space-between, stretch, row);
+      color: v.$color-tertiary;
+      background-color: inherit;
+      padding: 0;
+      border-radius: 0;
+    }
+    &__card {
+      flex: 0 0 80%;
+      padding: 4rem 2rem;
+      margin-left: 1rem;
+      background-color: v.$color-secondary;
+      border-radius: v.$border-radius-card;
+    }
   }
 }

@@ -618,6 +618,9 @@ a {
     font-size: 1rem;
   }
 }
+.caseStudy {
+  margin-bottom: 5rem;
+}
 .caseStudy .container {
   display: flex;
   flex-direction: column;
@@ -643,6 +646,7 @@ a {
   width: 35rem;
 }
 .caseStudy__content {
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -672,6 +676,33 @@ a {
   margin-top: auto;
 }
 
+@media only screen and (max-width: 75rem) {
+  .caseStudy {
+    margin-bottom: 2rem;
+  }
+  .caseStudy hr {
+    display: none;
+  }
+  .caseStudy__content {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0;
+    color: #f3f3f3;
+    background-color: inherit;
+    padding: 0;
+    border-radius: 0;
+  }
+  .caseStudy__card {
+    flex: 0 0 80%;
+    padding: 4rem 2rem;
+    margin-left: 1rem;
+    background-color: #191a23;
+    border-radius: 2.8rem;
+  }
+}
 .home .navbar {
   margin-bottom: 4rem;
 }
