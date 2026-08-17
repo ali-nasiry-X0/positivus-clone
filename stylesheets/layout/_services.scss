@@ -3,8 +3,17 @@
 .services {
   margin-bottom: v.$spacing-xl;
   &__title {
-    @include m.flex(start, center, row, 1rem);
     margin-bottom: v.$spacing-lg;
+    @include m.flex(start, center);
+    h2 {
+      background-color: v.$color-primary;
+      padding: 0.6rem;
+      border-radius: 0.8rem;
+      margin-right: 2rem;
+    }
+    p {
+      width: 35rem;
+    }
   }
   .title {
     background-color: v.$color-primary;
@@ -46,6 +55,9 @@
       text-align: center;
       br {
         display: none;
+      }
+      p {
+        width: auto;
       }
     }
     .card {

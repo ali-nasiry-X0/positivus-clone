@@ -20,6 +20,13 @@
     }
   }
   &__content {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
     overflow-x: hidden;
     @include m.flex(space-between, stretch, row);
     color: v.$color-tertiary;
@@ -40,6 +47,12 @@
 }
 @include m.respond("land-tab") {
   .caseStudy {
+    &__title {
+      @include m.flex(center, center, column, 1rem);
+      p {
+        width: auto;
+      }
+    }
     margin-bottom: v.$spacing-md;
     hr {
       display: none;
