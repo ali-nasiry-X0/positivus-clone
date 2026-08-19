@@ -2,6 +2,9 @@
 @use "../abstracts/mixins" as m;
 .team {
   margin-bottom: v.$spacing-xl;
+  .container {
+    @include m.flex(stretch, stretch, column);
+  }
   &__title {
     margin-bottom: v.$spacing-lg;
     @include m.flex(start, center);
@@ -19,7 +22,7 @@
     @include m.flex(space-between, stretch, column);
     position: relative;
     padding: 3rem;
-    height: 22rem;
+    height: 24rem;
     -webkit-box-shadow: 0px 7px 0px 0px #000000;
     box-shadow: 0px 7px 0px 0px #000000;
     border: 1px solid black;
@@ -39,6 +42,11 @@
     @include m.flex(center, center, row, 2rem);
     flex-wrap: wrap;
   }
+  button {
+    padding: 0 5rem;
+    margin-top: 2rem;
+    align-self: flex-end;
+  }
 }
 @include m.respond("land-tab") {
   .team {
@@ -55,6 +63,9 @@
     &__card {
       flex: 0 1 calc(50% - 1rem);
       margin-bottom: v.$spacing-md;
+    }
+    button {
+      align-self: center;
     }
   }
 }
