@@ -657,12 +657,7 @@ a {
 .caseStudy__title p {
   width: 35rem;
 }
-.caseStudy__content::-webkit-scrollbar {
-  display: none;
-}
 .caseStudy__content {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
   overflow-x: hidden;
   display: flex;
   flex-direction: row;
@@ -887,6 +882,9 @@ a {
     width: 1rem;
     height: 0.15rem;
   }
+}
+.team {
+  margin-bottom: 5rem;
 }
 .team__title {
   margin-bottom: 4rem;

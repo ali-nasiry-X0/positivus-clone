@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 .team {
+  margin-bottom: v.$spacing-xl;
   &__title {
     margin-bottom: v.$spacing-lg;
     @include m.flex(start, center);

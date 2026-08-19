@@ -20,13 +20,6 @@
     }
   }
   &__content {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
     overflow-x: hidden;
     @include m.flex(space-between, stretch, row);
     color: v.$color-tertiary;
