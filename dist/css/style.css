@@ -923,7 +923,6 @@ a {
   box-shadow: 0px 7px 0px 0px #000000;
   border: 1px solid black;
   border-radius: 2.8rem;
-  flex: 0 0 30%;
 }
 .team .card__header {
   display: flex;
@@ -939,12 +938,9 @@ a {
   top: 2rem;
 }
 .team__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 .team button {
   padding: 0 5rem;
@@ -953,6 +949,9 @@ a {
 }
 
 @media only screen and (max-width: 75rem) {
+  .team__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .team__title {
     display: flex;
     flex-direction: column;
@@ -968,7 +967,6 @@ a {
     width: auto;
   }
   .team__card {
-    flex: 0 1 calc(50% - 1rem);
     margin-bottom: 2rem;
   }
   .team button {
@@ -976,9 +974,11 @@ a {
   }
 }
 @media only screen and (max-width: 56.25rem) {
+  .team__content {
+    grid-template-columns: 1fr;
+  }
   .team__card {
     padding: 1rem;
-    flex: 0 1 100%;
   }
   .team .card__header {
     padding-top: 2.5rem;
