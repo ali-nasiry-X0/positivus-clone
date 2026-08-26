@@ -1,0 +1,143 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+.footer {
+  .container {
+    padding: 3rem;
+    background-color: v.$color-secondary;
+    border-radius: v.$border-radius-section v.$border-radius-section 0 0;
+    @include m.flex(stretch, stretch, column);
+  }
+  &__navbar {
+    margin-bottom: v.$spacing-md;
+    @include m.flex(space-between, center, row);
+    &__logo {
+      @include m.flex(stretch, center, row, 0.4rem);
+      color: v.$neutral-color-0;
+    }
+    &__menu {
+      @include m.flex(stretch, center, row, 2rem);
+    }
+    &__link {
+      color: v.$neutral-color-0;
+      text-decoration: underline;
+    }
+    &__social {
+      @include m.flex(stretch, center, row, 1rem);
+
+      img {
+        border-radius: 50%;
+        background-color: v.$neutral-color-900;
+      }
+    }
+  }
+  &__contact {
+    margin-bottom: v.$spacing-md;
+    @include m.flex(space-between, center, row);
+    color: v.$neutral-color-0;
+    &__content {
+      flex: 0 0 40%;
+    }
+    &__subscribe {
+      @include m.flex(center, center, row, 1rem);
+      flex: 0 0 60%;
+      background-color: #292a32;
+      border-radius: 0.9rem;
+    }
+    &__subscribe,
+    &__content {
+      height: 8rem;
+    }
+    .btn {
+      color: v.$neutral-color-900;
+      border: 1px solid v.$neutral-color-900;
+    }
+    input[type="email"] {
+      height: 4.25rem;
+      padding: 0 1.5rem;
+      border-radius: 0.9em;
+      border: 1px solid v.$neutral-color-0;
+      background-color: #292a32;
+      &::placeholder {
+        color: v.$neutral-color-0;
+      }
+    }
+  }
+  hr {
+    margin-bottom: v.$spacing-md;
+  }
+  &__copy-right {
+    @include m.flex(stretch, center, row, 3rem);
+    p,
+    a {
+      color: v.$neutral-color-0;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+@include m.respond("land-tab") {
+  .footer {
+    &__navbar {
+      margin-bottom: v.$spacing-md;
+      @include m.flex(space-between, center, row);
+      &__social {
+        display: none;
+      }
+    }
+    &__contact {
+      margin-bottom: v.$spacing-md;
+      @include m.flex(space-between, center, column, 2rem);
+      &__content {
+        flex: 0 0 100%;
+      }
+      &__subscribe {
+        padding: 2rem;
+        flex: 0 0 100%;
+        gap: 4rem;
+      }
+      &__subscribe,
+      &__content {
+        width: 100%;
+      }
+    }
+  }
+}
+@include m.respond("port-tab") {
+  .footer {
+    .container {
+      @include m.flex(center, center, column);
+      width: 100%;
+      border-radius: 0;
+      padding: 1rem;
+    }
+    &__navbar {
+      margin-bottom: v.$spacing-md;
+      @include m.flex(space-between, center, column, 1rem);
+      &__menu {
+        flex-direction: column;
+      }
+    }
+    &__contact {
+      &__content {
+      }
+      &__subscribe {
+        flex-direction: column;
+        gap: 0.5rem;
+        input[type="email"],
+        .btn {
+          padding: 1rem;
+          font-size: 1rem;
+          width: 100%;
+        }
+      }
+      &__subscribe,
+      &__content {
+        width: 100%;
+      }
+    }
+    hr {
+      width: 100%;
+    }
+  }
+}
