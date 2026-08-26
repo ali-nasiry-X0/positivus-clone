@@ -30,6 +30,9 @@ a {
   text-decoration: none;
   color: v.$neutral-color-900;
 }
+label {
+  font-weight: v.$weight-semi-bold;
+}
 @include m.respond("land-tab") {
   h1 {
     font-size: v.$font-size-h1-mobile;
